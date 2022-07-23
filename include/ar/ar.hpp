@@ -145,6 +145,12 @@ namespace ar{
 		Reader(std::istream& is):
 			inputStream(is)
 		{}
+	    
+	    	void reset(){
+			inputStream.clear(); 
+			inputStream.seekg(0, std::ios::beg);
+			inputStream.clear(); 
+		}
 
 		io_tools::isubstream getFileStream(std::string filename){
 			// std::shared_ptr<void> _ (nullptr, [&](...){ 
