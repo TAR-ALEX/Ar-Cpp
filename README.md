@@ -29,7 +29,7 @@ To use this project with a dependency manager install the cpp-dependency-manager
 and create a vendor.txt file and add the following entries:
 
 ```
-git "https://github.com/TAR-ALEX/Ar-Cpp" main "./include" "./vendor/include",
+git "https://github.com/TAR-ALEX/Ar-Cpp" master "./include" "./vendor/include",
 git "https://github.com/TAR-ALEX/io_tools.git" master "./include" "./vendor/include",
 
 ```
