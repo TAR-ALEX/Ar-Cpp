@@ -5,19 +5,19 @@ A c++ / cpp implementation of .a and .ar file extraction. A header only library.
 Sample usage:
 
 ```c++
-#include <iostream>
-#include <fstream>
 #include <ar/ar.hpp>
+#include <fstream>
+#include <iostream>
 
 using namespace std;
 
-int main(){
-    //use your own file
-    string filename = "../sample.deb";
-    ar::Reader r(filename);
-    auto stream = r.getFileStream("debian-binary");
-    cout << "debian-binary = " << stream.rdbuf() << endl;
-    return 0;
+int main() {
+	//use your own file
+	string filename = "../sample.deb";
+	ar::Reader r(filename);
+	auto stream = r.open("debian-binary");
+	cout << "debian-binary = " << stream.rdbuf() << endl;
+	return 0;
 }
 ```
 
